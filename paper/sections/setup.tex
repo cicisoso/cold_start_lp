@@ -1,0 +1,45 @@
+\section{Study Design}
+\label{sec:setup}
+
+\paragraph{Problem setting.}
+We study transductive link prediction: given a partially observed graph $G = (V, E)$ with node features $\mathbf{X}$, predict missing edges. We split edges into train/validation/test sets and train GNN encoders with dot-product decoders.
+
+\paragraph{Degree-stratified evaluation.}
+We evaluate LP performance stratified by edge difficulty, defined through endpoint degree. For an edge $(u, v)$, we compute $d_{\min}(u,v) = \min(\deg_{\text{train}}(u), \deg_{\text{train}}(v))$ using \emph{training-graph degree only} to avoid information leakage. Edges are binned into: \emph{cold} ($d_{\min} \leq 5$), \emph{warm} ($6 \leq d_{\min} \leq 20$), and \emph{hot} ($d_{\min} > 20$). For fine-grained analysis, we use bins of width: 2--4, 4--6, 6--10, 10--20, 20--50, 50+.
+
+\paragraph{Datasets.}
+We use 6 datasets spanning citation networks, co-authorship, co-purchase, and collaboration graphs (Table~\ref{tab:datasets}). The fraction of cold nodes (degree $\leq 5$) ranges from 6\% (Photo) to 65\% (CiteSeer), providing diverse sparsity profiles.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Dataset statistics. Cold\% = fraction of nodes with degree $\leq 5$ in the training graph.}
+\label{tab:datasets}
+\begin{tabular}{lrrrrl}
+\toprule
+Dataset & Nodes & Edges & Feat. & Cold\% & Type \\
+\midrule
+Cora & 2,708 & 5,278 & 1,433 & 39\% & Citation \\
+CiteSeer & 3,327 & 4,552 & 3,703 & 65\% & Citation \\
+PubMed & 19,717 & 44,324 & 500 & 63\% & Citation \\
+CS & 18,333 & 81,894 & 6,805 & 15\% & Coauthor \\
+Photo & 7,650 & 119,081 & 745 & 6\% & Purchase \\
+ogbl-collab & 235,868 & 280,729 & 128 & $\sim$30\% & Collab. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Methods.}
+We compare 7 training methods using identical GCN and GraphSAGE backbones (2-layer, 128-dim):
+\begin{itemize}[leftmargin=*, itemsep=1pt]
+    \item \textbf{Vanilla}: Standard supervised LP with BCE loss.
+    \item \textbf{Reweight}: BCE loss with $3\times$ weight on cold edges.
+    \item \textbf{FocalLoss}: Focal loss ($\gamma=2$) to upweight hard examples.
+    \item \textbf{GlobalCL}: Full-graph augmentation (edge drop 0.3 + feature noise 0.1) with InfoNCE loss ($\lambda=0.5$).
+    \item \textbf{DegreeGatedCL}: CL applied only to nodes with $\deg \leq 5$.
+    \item \textbf{RandomCL}: CL applied to a random 30\% of nodes.
+    \item \textbf{UncertaintyCL}: CL applied to the 30\% most uncertain nodes (MC dropout, updated every 20 epochs).
+    \item \textbf{AugOnly}: Training on augmented graph without contrastive loss.
+\end{itemize}
+
+All methods use Adam ($\text{lr}=0.01$, weight decay $5 \times 10^{-4}$), early stopping on validation AUC (patience 50), and 5 seeds. Augmentation and CL hyperparameters are shared across methods where applicable.

@@ -1,0 +1,71 @@
+\appendix
+\section{Full Results: SAGE and GAT Backbones}
+\label{app:full}
+
+\begin{table*}[h]
+\centering
+\small
+\caption{LP performance with SAGE backbone (mean, 5 seeds). CL methods show even larger relative cold gains with SAGE, which has weaker baseline performance.}
+\label{tab:main_sage}
+\begin{tabular}{l cccc cccc}
+\toprule
+& \multicolumn{4}{c}{Cora} & \multicolumn{4}{c}{CiteSeer} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+Method & AUC & AP & Cold AUC & Cold AP & AUC & AP & Cold AUC & Cold AP \\
+\midrule
+Vanilla & .736 & .696 & .654 & .410 & .753 & .741 & .653 & .484 \\
+Reweight & .667 & .637 & .643 & .414 & .669 & .622 & .615 & .441 \\
+FocalLoss & .706 & .681 & .651 & .438 & .753 & .737 & .669 & .508 \\
+NodeDup & .738 & .699 & .670 & .426 & .758 & .731 & .670 & .490 \\
+GlobalCL & .838 & .816 & .777 & .582 & .838 & .825 & .755 & .596 \\
+DegGatedCL & .831 & .796 & .785 & .592 & .850 & .820 & .793 & .628 \\
+RandomCL & .846 & .818 & .782 & .584 & .836 & .804 & .767 & .589 \\
+UncertCL & .808 & .778 & .747 & .529 & .816 & .803 & .740 & .579 \\
+\midrule
+& \multicolumn{4}{c}{PubMed} & \multicolumn{4}{c}{CS} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+Vanilla & .847 & .848 & .706 & .455 & .888 & .880 & .759 & .328 \\
+Reweight & .847 & .845 & .711 & .468 & .817 & .800 & .715 & .300 \\
+FocalLoss & .794 & .790 & .661 & .394 & .899 & .890 & .748 & .350 \\
+NodeDup & .843 & .836 & .721 & .457 & .908 & .900 & .775 & .367 \\
+GlobalCL & .856 & .852 & .717 & .477 & .941 & .933 & .882 & .555 \\
+DegGatedCL & .865 & .855 & .737 & .483 & .939 & .927 & .897 & .592 \\
+RandomCL & .871 & .866 & .741 & .502 & .939 & .925 & .876 & .528 \\
+UncertCL & .873 & .867 & .754 & .511 & .934 & .920 & .861 & .507 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[h]
+\centering
+\small
+\caption{LP performance with GAT backbone (mean, 5 seeds). The degree-dependent gain pattern holds with attention-based message passing.}
+\label{tab:main_gat}
+\begin{tabular}{l cccc cccc}
+\toprule
+& \multicolumn{4}{c}{Cora} & \multicolumn{4}{c}{CiteSeer} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+Method & AUC & AP & Cold AUC & Cold AP & AUC & AP & Cold AUC & Cold AP \\
+\midrule
+Vanilla & .885 & .881 & .814 & .679 & .876 & .883 & .802 & .710 \\
+Reweight & .860 & .854 & .803 & .657 & .873 & .879 & .798 & .699 \\
+FocalLoss & .883 & .877 & .827 & .686 & .857 & .860 & .779 & .659 \\
+NodeDup & .885 & .878 & .824 & .681 & .880 & .884 & .804 & .697 \\
+GlobalCL & .915 & .910 & .874 & .765 & .916 & .919 & .872 & .814 \\
+DegGatedCL & .911 & .907 & .872 & .775 & .914 & .915 & .867 & .806 \\
+RandomCL & .918 & .913 & .878 & .778 & .914 & .919 & .865 & .807 \\
+UncertCL & .909 & .900 & .868 & .766 & .897 & .901 & .845 & .783 \\
+\midrule
+& \multicolumn{4}{c}{PubMed} & \multicolumn{4}{c}{CS} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+Vanilla & .834 & .822 & .772 & .549 & .945 & .935 & .898 & .607 \\
+Reweight & .853 & .836 & .809 & .598 & .930 & .914 & .876 & .548 \\
+FocalLoss & .791 & .779 & .727 & .483 & .950 & .943 & .894 & .599 \\
+NodeDup & .793 & .781 & .721 & .474 & .945 & .936 & .890 & .591 \\
+GlobalCL & .918 & .903 & .891 & .750 & .953 & .945 & .925 & .694 \\
+DegGatedCL & .919 & .904 & .892 & .754 & .947 & .934 & .927 & .707 \\
+RandomCL & .921 & .907 & .893 & .755 & .950 & .940 & .921 & .678 \\
+UncertCL & .908 & .895 & .873 & .719 & .946 & .934 & .915 & .661 \\
+\bottomrule
+\end{tabular}
+\end{table*}

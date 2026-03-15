@@ -1,0 +1,45 @@
+\documentclass[sigconf,nonacm]{acmart}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{enumitem}
+
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+
+\newcommand{\method}{CL}
+\newcommand{\augonly}{AugOnly}
+\newcommand{\coldauc}{Cold-AUC}
+
+\begin{document}
+
+\title{Tail Nodes Benefit Most from Graph Self-Supervision \\ in Link Prediction}
+
+\author{Anonymous}
+\affiliation{\institution{Anonymous Institution}\country{}}
+
+\begin{abstract}
+Graph self-supervised learning (SSL), particularly contrastive learning (CL), has become a standard technique for improving link prediction in graph neural networks. However, prior work evaluates these methods using aggregate metrics that obscure where the improvements actually occur. In this paper, we present a systematic, degree-stratified analysis of graph SSL for link prediction across 6 datasets, 2 GNN backbones, and 7+ training methods. Our key findings are: (1)~SSL gains are disproportionately concentrated on low-degree (tail) nodes, with improvements of up to 13.6\% AUC for the lowest-degree edges compared to 3.3\% for high-degree edges, and this pattern is monotonically decreasing with degree; (2)~the benefit decomposes into augmentation regularization and the contrastive objective, with augmentation alone sufficient on large/dense graphs while the contrastive objective adds value on small/sparse graphs; (3)~selective CL targeting only low-degree nodes does not outperform global CL, suggesting the benefit arises from global representation regularization rather than node-specific invariances; and (4)~simpler alternatives such as loss reweighting and focal loss provide substantially smaller gains than SSL. These findings provide actionable guidance for practitioners and challenge the implicit assumption that SSL improvements are uniformly distributed across the graph.
+\end{abstract}
+
+\maketitle
+
+\input{sections/introduction}
+\input{sections/related}
+\input{sections/setup}
+\input{sections/results}
+\input{sections/mechanism}
+\input{sections/alternatives}
+\input{sections/discussion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\input{sections/appendix}
+
+\end{document}

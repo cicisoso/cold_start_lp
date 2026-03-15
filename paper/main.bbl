@@ -1,0 +1,170 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{12}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[Bardes et~al\mbox{.}(2022)]%
+        {bardes2022vicreg}
+\bibfield{author}{\bibinfo{person}{Adrien Bardes}, \bibinfo{person}{Jean
+  Ponce}, {and} \bibinfo{person}{Yann LeCun}.} \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{{VICReg}: Variance-Invariance-Covariance
+  Regularization for Self-Supervised Learning}. In
+  \bibinfo{booktitle}{\emph{ICLR}}.
+\newblock
+
+
+\bibitem[Chen et~al\mbox{.}(2024)]%
+        {chen2024spottarget}
+\bibfield{author}{\bibinfo{person}{Jing Chen}, \bibinfo{person}{Jinghui Wang},
+  {and} \bibinfo{person}{Jure Leskovec}.} \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Pitfalls in Link Prediction with Graph Neural
+  Networks: Understanding the Impact of Target-Link Inclusion and Better
+  Practices}. In \bibinfo{booktitle}{\emph{WSDM}}.
+\newblock
+
+
+\bibitem[Guo et~al\mbox{.}(2024)]%
+        {guo2024nodedup}
+\bibfield{author}{\bibinfo{person}{Zhichun Guo}, \bibinfo{person}{Tong Zhao},
+  \bibinfo{person}{Yozen Liu}, \bibinfo{person}{Kaiwen Dong},
+  \bibinfo{person}{William Shiao}, \bibinfo{person}{Mingxuan Ju},
+  \bibinfo{person}{Neil Shah}, {and} \bibinfo{person}{Nitesh~V Chawla}.}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{Node Duplication Improves Cold-start Link
+  Prediction}.
+\newblock \bibinfo{journal}{\emph{arXiv preprint arXiv:2402.09711}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Kipf and Welling(2016)]%
+        {kipf2016variational}
+\bibfield{author}{\bibinfo{person}{Thomas~N Kipf} {and} \bibinfo{person}{Max
+  Welling}.} \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{Variational Graph Auto-Encoders}. In
+  \bibinfo{booktitle}{\emph{NeurIPS Workshop on Bayesian Deep Learning}}.
+\newblock
+
+
+\bibitem[Liu et~al\mbox{.}(2024)]%
+        {liu2024dahgn}
+\bibfield{author}{\bibinfo{person}{Shuangyin Liu} {et~al\mbox{.}}}
+  \bibinfo{year}{2024}\natexlab{}.
+\newblock \showarticletitle{{DAHGN}: Degree-Aware Heterogeneous Graph Neural
+  Network}.
+\newblock \bibinfo{journal}{\emph{Knowledge-Based Systems}}
+  (\bibinfo{year}{2024}).
+\newblock
+
+
+\bibitem[Tang et~al\mbox{.}(2020)]%
+        {tang2020investigating}
+\bibfield{author}{\bibinfo{person}{Xianfeng Tang}, \bibinfo{person}{Yandong
+  Li}, \bibinfo{person}{Yiwei Sun}, \bibinfo{person}{Huaxiu Elber},
+  \bibinfo{person}{Jian Yin}, {and} \bibinfo{person}{Faisal Chen}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Investigating and Mitigating Degree-Related Biases
+  in Graph Convolutional Networks}.
+\newblock \bibinfo{journal}{\emph{CIKM}} (\bibinfo{year}{2020}).
+\newblock
+
+
+\bibitem[Thakoor et~al\mbox{.}(2022)]%
+        {thakoor2022large}
+\bibfield{author}{\bibinfo{person}{Shantanu Thakoor}, \bibinfo{person}{Corentin
+  Tallec}, \bibinfo{person}{Mohammad~Gheshlaghi Azar},
+  \bibinfo{person}{R{\'e}mi Munos}, \bibinfo{person}{Petar
+  Veli{\v{c}}kovi{\'c}}, {and} \bibinfo{person}{Michal Valko}.}
+  \bibinfo{year}{2022}\natexlab{}.
+\newblock \showarticletitle{Large-Scale Representation Learning on Graphs via
+  Bootstrapping}. In \bibinfo{booktitle}{\emph{ICLR}}.
+\newblock
+
+
+\bibitem[Wang et~al\mbox{.}(2024b)]%
+        {wang2024neural}
+\bibfield{author}{\bibinfo{person}{Xiyuan Wang}, \bibinfo{person}{Haotong
+  Yang}, {and} \bibinfo{person}{Muhan Zhang}.}
+  \bibinfo{year}{2024}\natexlab{b}.
+\newblock \showarticletitle{Neural Common Neighbor with Completion for Link
+  Prediction}. In \bibinfo{booktitle}{\emph{ICLR}}.
+\newblock
+
+
+\bibitem[Wang et~al\mbox{.}(2024a)]%
+        {wang2024ltlp}
+\bibfield{author}{\bibinfo{person}{Yakun Wang}, \bibinfo{person}{Daixin Wang},
+  \bibinfo{person}{Hongrui Liu}, \bibinfo{person}{Binbin Hu},
+  \bibinfo{person}{Yingcui Yan}, \bibinfo{person}{Qiyang Zhang}, {and}
+  \bibinfo{person}{Zhiqiang Zhang}.} \bibinfo{year}{2024}\natexlab{a}.
+\newblock \showarticletitle{Optimizing Long-tailed Link Prediction in Graph
+  Neural Networks through Structure Representation Enhancement}. In
+  \bibinfo{booktitle}{\emph{KDD}}.
+\newblock
+
+
+\bibitem[You et~al\mbox{.}(2020)]%
+        {you2020graph}
+\bibfield{author}{\bibinfo{person}{Yuning You}, \bibinfo{person}{Tianlong
+  Chen}, \bibinfo{person}{Yongduo Sui}, \bibinfo{person}{Ting Chen},
+  \bibinfo{person}{Zhangyang Wang}, {and} \bibinfo{person}{Yang Shen}.}
+  \bibinfo{year}{2020}\natexlab{}.
+\newblock \showarticletitle{Graph Contrastive Learning with Augmentations}. In
+  \bibinfo{booktitle}{\emph{NeurIPS}}.
+\newblock
+
+
+\bibitem[Zhang and Chen(2018)]%
+        {zhang2018link}
+\bibfield{author}{\bibinfo{person}{Muhan Zhang} {and} \bibinfo{person}{Yixin
+  Chen}.} \bibinfo{year}{2018}\natexlab{}.
+\newblock \showarticletitle{Link Prediction Based on Graph Neural Networks}. In
+  \bibinfo{booktitle}{\emph{NeurIPS}}.
+\newblock
+
+
+\bibitem[Zhu et~al\mbox{.}(2021)]%
+        {zhu2021graph}
+\bibfield{author}{\bibinfo{person}{Yanqiao Zhu}, \bibinfo{person}{Yichen Xu},
+  \bibinfo{person}{Feng Yu}, \bibinfo{person}{Qiang Liu}, \bibinfo{person}{Shu
+  Wu}, {and} \bibinfo{person}{Liang Wang}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{Graph Contrastive Learning with Adaptive
+  Augmentation}. In \bibinfo{booktitle}{\emph{WWW}}.
+\newblock
+
+
+\end{thebibliography}

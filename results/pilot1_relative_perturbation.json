@@ -1,0 +1,100 @@
+{
+  "Cora": {
+    "dataset": "Cora",
+    "seed": 42,
+    "baseline": {
+      "overall": {
+        "auc": 0.8826301898613396,
+        "count": 1054
+      },
+      "isolated (0-1)": {
+        "auc": NaN,
+        "count": 0
+      },
+      "cold (2-5)": {
+        "auc": 0.8082840236686389,
+        "count": 478
+      },
+      "warm (6-20)": {
+        "auc": 0.8991200769578994,
+        "count": 564
+      },
+      "hot (>20)": {
+        "auc": 0.6363636363636364,
+        "count": 12
+      }
+    },
+    "equalized": {
+      "overall": {
+        "auc": 0.8882687799977675,
+        "count": 1054
+      },
+      "isolated (0-1)": {
+        "auc": NaN,
+        "count": 0
+      },
+      "cold (2-5)": {
+        "auc": 0.8171174978867286,
+        "count": 478
+      },
+      "warm (6-20)": {
+        "auc": 0.8966019692168401,
+        "count": 564
+      },
+      "hot (>20)": {
+        "auc": 0.9090909090909091,
+        "count": 12
+      }
+    },
+    "signal": "POSITIVE"
+  },
+  "CiteSeer": {
+    "dataset": "CiteSeer",
+    "seed": 42,
+    "baseline": {
+      "overall": {
+        "auc": 0.8480618282816086,
+        "count": 910
+      },
+      "isolated (0-1)": {
+        "auc": NaN,
+        "count": 17
+      },
+      "cold (2-5)": {
+        "auc": 0.7636289028084531,
+        "count": 602
+      },
+      "warm (6-20)": {
+        "auc": 0.867853139013453,
+        "count": 271
+      },
+      "hot (>20)": {
+        "auc": 0.9473684210526315,
+        "count": 20
+      }
+    },
+    "equalized": {
+      "overall": {
+        "auc": 0.8255114116652579,
+        "count": 910
+      },
+      "isolated (0-1)": {
+        "auc": NaN,
+        "count": 17
+      },
+      "cold (2-5)": {
+        "auc": 0.7596582063072521,
+        "count": 602
+      },
+      "warm (6-20)": {
+        "auc": 0.8868647234678625,
+        "count": 271
+      },
+      "hot (>20)": {
+        "auc": 1.0,
+        "count": 20
+      }
+    },
+    "signal": "NEGATIVE"
+  }
+}

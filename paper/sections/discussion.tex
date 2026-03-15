@@ -1,0 +1,11 @@
+\section{Discussion and Conclusion}
+\label{sec:discussion}
+
+\paragraph{Practical implications.}
+Our findings provide clear guidance for practitioners: when LP performance on sparse or tail regions matters, standard graph SSL (global CL or even simple augmentation) is a robust default. There is no need to design degree-aware or selective CL methods---the benefit is inherently global and disproportionately helps tail nodes. On large, dense graphs, augmentation alone suffices, avoiding the computational overhead of contrastive objectives.
+
+\paragraph{Limitations.}
+Our study has several important limitations. First, we cover two message-passing backbones (GCN, GraphSAGE); the phenomenon may differ for graph transformers, subgraph-based LP methods, or other encoder families. Second, node degree is correlated with many structural properties (local homophily, feature quality, neighborhood diversity, community membership), and our analysis does not fully disentangle these factors. Third, the controlled sparsity experiment uses uniform edge dropping, which may not capture the structure of naturally sparse graphs. Fourth, we report only AUC; ranking metrics (Hits@K, MRR) may reveal different patterns. Fifth, our benchmarks are transductive; extension to temporal and inductive settings remains open. Finally, our negative result on selective CL is bounded by the targeting strategies we tested and does not rule out all possible selective approaches.
+
+\paragraph{Conclusion.}
+We presented a systematic degree-stratified analysis of graph self-supervision for link prediction. Our central finding---that SSL gains are monotonically concentrated on tail nodes---is robust across 6 datasets, 2 backbones, and multiple training methods. The benefit decomposes into augmentation regularization and the contrastive objective, with their relative importance depending on graph sparsity. Selective CL targeting does not improve upon global CL, and non-CL alternatives provide substantially smaller gains. These results challenge the assumption of uniform SSL benefits and highlight the value of degree-stratified evaluation as a standard practice in graph LP research.

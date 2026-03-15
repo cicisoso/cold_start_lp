@@ -1,0 +1,11 @@
+\section{Related Work}
+\label{sec:related}
+
+\paragraph{Graph self-supervised learning.}
+Graph SSL methods learn representations through pretext tasks without labels. Contrastive approaches generate augmented views via edge dropping, feature masking, or subgraph sampling and maximize agreement between views~\cite{you2020graph, zhu2021graph}. Non-contrastive methods such as BGRL~\cite{thakoor2022large} and VICReg~\cite{bardes2022vicreg} avoid negative samples entirely. While these methods consistently improve downstream task performance, evaluations focus on aggregate metrics, leaving the distribution of gains across graph structure unexplored.
+
+\paragraph{Link prediction with GNNs.}
+GNN-based LP typically encodes nodes via message passing and scores candidate edges through inner products or learned decoders~\cite{zhang2018link, kipf2016variational}. Recent work highlights pitfalls in evaluation: SpotTarget~\cite{chen2024spottarget} shows that including target links during training disproportionately inflates performance for low-degree nodes, while NCNC~\cite{wang2024neural} demonstrates that common-neighbor completion addresses graph incompleteness. Our work complements these studies by analyzing how SSL training affects degree-stratified LP performance.
+
+\paragraph{Degree bias and tail-node learning.}
+GNNs exhibit known degree bias: low-degree nodes receive less expressive representations due to sparse neighborhoods~\cite{tang2020investigating}. Recent remedies include NodeDup~\cite{guo2024nodedup}, which duplicates low-degree nodes; DAHGN~\cite{liu2024dahgn}, which uses degree-aware contrastive learning for node classification; and LTLP~\cite{wang2024ltlp}, which enhances structural features for long-tailed LP. Our work differs by studying \emph{why} standard SSL already helps tail nodes, rather than proposing a new tail-specific method.

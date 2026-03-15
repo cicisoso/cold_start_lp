@@ -1,0 +1,20 @@
+\section{Introduction}
+\label{sec:intro}
+
+Link prediction (LP) is a fundamental task in graph machine learning, with applications ranging from social network analysis to biological interaction discovery and recommendation systems~\cite{zhang2018link}. Graph neural networks (GNNs) combined with self-supervised learning (SSL)---particularly graph contrastive learning (CL)---have become a dominant paradigm, with methods such as GraphCL~\cite{you2020graph}, GCA~\cite{zhu2021graph}, and BGRL~\cite{thakoor2022large} demonstrating consistent improvements on standard benchmarks.
+
+However, a critical question remains unanswered: \emph{which nodes actually benefit from graph SSL?} Existing evaluations report aggregate metrics (overall AUC, Hits@K) that treat all edges equally, obscuring potential heterogeneity in how improvements are distributed across the graph. This is particularly concerning because real-world graphs exhibit highly skewed degree distributions, and LP failures on low-degree (tail) nodes often correspond to the most practically important scenarios---cold-start users, newly published papers, or recently discovered proteins.
+
+In this paper, we conduct a systematic, degree-stratified empirical study of graph SSL for link prediction. Our study spans 6 datasets (including OGB-scale benchmarks), 2 GNN backbones (GCN and GraphSAGE), 7+ training methods, and 5 random seeds per configuration. We define edge difficulty via \emph{training-graph} degree ($d_{\min}(u,v) = \min(\deg_{\text{train}}(u), \deg_{\text{train}}(v))$) to avoid information leakage. Our analysis reveals four empirical findings across our benchmark suite:
+
+\begin{enumerate}[leftmargin=*, itemsep=2pt]
+    \item \textbf{Disproportionate tail benefit.} Across our benchmarks, SSL improvements are largest for low-degree edges and decrease with degree: edges with $d_{\min} \in [2,4]$ gain up to +13.6\% AUC on CS, while edges with $d_{\min} \in [20,50]$ gain +3.3\%. This pattern holds across all tested datasets and both backbones.
+
+    \item \textbf{Augmentation vs.\ contrastive objective.} The benefit can be partially attributed to two components: augmentation regularization and the contrastive objective. In our experiments, on small, sparse graphs the contrastive objective contributes meaningfully (+2--3\% additional gain); on larger, denser graphs, augmentation alone achieves comparable performance.
+
+    \item \textbf{Selective CL does not help (negative result).} Despite the disproportionate tail benefit, targeting CL specifically at low-degree nodes---via degree gating, random selection, or uncertainty-guided selection---does not outperform global CL across our benchmarks. This suggests the benefit arises from global representation effects rather than node-specific invariances.
+
+    \item \textbf{Non-SSL alternatives are weaker.} Simpler interventions for tail improvement (degree-weighted loss, focal loss) provide substantially smaller gains than SSL methods across our datasets, suggesting that SSL offers a qualitatively different form of regularization.
+\end{enumerate}
+
+These findings provide actionable guidance: when LP performance on sparse regions matters, global graph SSL is a robust default that delivers disproportionate tail-node benefits without requiring explicit degree-aware design. Our analysis also challenges the implicit assumption in graph SSL literature that improvements are uniformly distributed across the graph structure.
