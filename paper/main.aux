@@ -43,15 +43,28 @@
 \@writefile{toc}{\contentsline {paragraph}{Degree-stratified gains.}{2}{section*.13}\protected@file@percent }
 \@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces LP performance (mean $\pm $ std, 5 seeds) with GCN backbone. Best cold AUC per dataset in \textbf  {bold}. CL methods dominate on cold edges, with gains consistent across AUC and AP.}}{3}{table.caption.12}\protected@file@percent }
 \newlabel{tab:main_gcn}{{2}{3}{LP performance (mean $\pm $ std, 5 seeds) with GCN backbone. Best cold AUC per dataset in \textbf {bold}. CL methods dominate on cold edges, with gains consistent across AUC and AP}{table.caption.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Inductive evaluation: 20\% of nodes held out entirely. CL consistently improves prediction of links to unseen nodes.}}{3}{table.caption.19}\protected@file@percent }
+\newlabel{tab:inductive}{{3}{3}{Inductive evaluation: 20\% of nodes held out entirely. CL consistently improves prediction of links to unseen nodes}{table.caption.19}{}}
 \@writefile{toc}{\contentsline {paragraph}{Robustness across backbones and metrics.}{3}{section*.16}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{OGB-scale validation.}{3}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Inductive cold-start evaluation.}{3}{section*.18}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Decomposition of cold-edge gains. On small/sparse graphs (Cora), the contrastive objective adds substantial value (+2.4\%). On larger/denser graphs (CS, ogbl-collab), augmentation alone is sufficient.}}{3}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:decomposition}{{3}{3}{Decomposition of cold-edge gains. On small/sparse graphs (Cora), the contrastive objective adds substantial value (+2.4\%). On larger/denser graphs (CS, ogbl-collab), augmentation alone is sufficient}{figure.caption.21}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Mechanism: Augmentation vs.\ Contrastive Objective}{3}{section.5}\protected@file@percent }
 \newlabel{sec:mechanism}{{5}{3}{Mechanism: Augmentation vs.\ Contrastive Objective}{section.5}{}}
-\@writefile{toc}{\contentsline {paragraph}{Decomposition experiment.}{3}{section*.18}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Decomposition of cold-edge gains. On small/sparse graphs (Cora), the contrastive objective adds substantial value (+2.4\%). On larger/denser graphs (CS, ogbl-collab), augmentation alone is sufficient.}}{3}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:decomposition}{{3}{3}{Decomposition of cold-edge gains. On small/sparse graphs (Cora), the contrastive objective adds substantial value (+2.4\%). On larger/denser graphs (CS, ogbl-collab), augmentation alone is sufficient}{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {paragraph}{Controlled sparsity experiment.}{3}{section*.20}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Interpretation.}{3}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Decomposition experiment.}{3}{section*.20}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Cold-edge AUC under controlled sparsification. As graphs become sparser, all methods improve tail-node performance. The CL--AugOnly gap on Cora is consistently positive (+1--3\%), while on CS it is smaller.}}{4}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:sparsity}{{4}{4}{Cold-edge AUC under controlled sparsification. As graphs become sparser, all methods improve tail-node performance. The CL--AugOnly gap on Cora is consistently positive (+1--3\%), while on CS it is smaller}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {paragraph}{Controlled sparsity experiment.}{4}{section*.22}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Interpretation.}{4}{section*.24}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Isolating degree from confounding factors.}{4}{section*.25}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Spearman correlations between per-edge SSL gain and topological features. Partial: degree vs.\ gain controlling for clustering and diversity. Degree remains the strongest predictor.}}{4}{table.caption.26}\protected@file@percent }
+\newlabel{tab:partial}{{4}{4}{Spearman correlations between per-edge SSL gain and topological features. Partial: degree vs.\ gain controlling for clustering and diversity. Degree remains the strongest predictor}{table.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cold-edge AUC across methods. All CL variants perform similarly, substantially outperforming non-CL baselines. Selective targeting provides no advantage over global CL.}}{4}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:selective}{{5}{4}{Cold-edge AUC across methods. All CL variants perform similarly, substantially outperforming non-CL baselines. Selective targeting provides no advantage over global CL}{figure.caption.28}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Alternative Interventions}{4}{section.6}\protected@file@percent }
+\newlabel{sec:alternatives}{{6}{4}{Alternative Interventions}{section.6}{}}
+\@writefile{toc}{\contentsline {paragraph}{Selective CL does not outperform global CL.}{4}{section*.27}\protected@file@percent }
 \bibstyle{ACM-Reference-Format}
 \bibdata{references}
 \bibcite{bardes2022vicreg}{{1}{2022}{{Bardes et~al\mbox  {.}}}{{}}}
@@ -61,20 +74,6 @@
 \bibcite{liu2024dahgn}{{5}{2024}{{Liu et~al\mbox  {.}}}{{}}}
 \bibcite{tang2020investigating}{{6}{2020}{{Tang et~al\mbox  {.}}}{{}}}
 \bibcite{thakoor2022large}{{7}{2022}{{Thakoor et~al\mbox  {.}}}{{}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Cold-edge AUC under controlled sparsification. As graphs become sparser, all methods improve tail-node performance. The CL--AugOnly gap on Cora is consistently positive (+1--3\%), while on CS it is smaller.}}{4}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:sparsity}{{4}{4}{Cold-edge AUC under controlled sparsification. As graphs become sparser, all methods improve tail-node performance. The CL--AugOnly gap on Cora is consistently positive (+1--3\%), while on CS it is smaller}{figure.caption.21}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Cold-edge AUC across methods. All CL variants perform similarly, substantially outperforming non-CL baselines. Selective targeting provides no advantage over global CL.}}{4}{figure.caption.24}\protected@file@percent }
-\newlabel{fig:selective}{{5}{4}{Cold-edge AUC across methods. All CL variants perform similarly, substantially outperforming non-CL baselines. Selective targeting provides no advantage over global CL}{figure.caption.24}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Alternative Interventions}{4}{section.6}\protected@file@percent }
-\newlabel{sec:alternatives}{{6}{4}{Alternative Interventions}{section.6}{}}
-\@writefile{toc}{\contentsline {paragraph}{Selective CL does not outperform global CL.}{4}{section*.23}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Non-CL baselines are substantially weaker.}{4}{section*.25}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion and Conclusion}{4}{section.7}\protected@file@percent }
-\newlabel{sec:discussion}{{7}{4}{Discussion and Conclusion}{section.7}{}}
-\@writefile{toc}{\contentsline {paragraph}{Practical implications.}{4}{section*.26}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Limitations.}{4}{section*.27}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Conclusion.}{4}{section*.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{References}{4}{section*.30}\protected@file@percent }
 \bibcite{wang2024neural}{{8}{2024b}{{Wang et~al\mbox  {.}}}{{}}}
 \bibcite{wang2024ltlp}{{9}{2024a}{{Wang et~al\mbox  {.}}}{{}}}
 \bibcite{you2020graph}{{10}{2020}{{You et~al\mbox  {.}}}{{}}}
@@ -85,11 +84,18 @@
 \newlabel{tocindent1}{6.25499pt}
 \newlabel{tocindent2}{0pt}
 \newlabel{tocindent3}{0pt}
+\@writefile{toc}{\contentsline {paragraph}{Non-CL baselines are substantially weaker.}{5}{section*.29}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion and Conclusion}{5}{section.7}\protected@file@percent }
+\newlabel{sec:discussion}{{7}{5}{Discussion and Conclusion}{section.7}{}}
+\@writefile{toc}{\contentsline {paragraph}{Practical implications.}{5}{section*.30}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Limitations.}{5}{section*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Conclusion.}{5}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{References}{5}{section*.34}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {A}Full Results: SAGE and GAT Backbones}{5}{appendix.A}\protected@file@percent }
 \newlabel{app:full}{{A}{5}{Full Results: SAGE and GAT Backbones}{appendix.A}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces LP performance with SAGE backbone (mean, 5 seeds). CL methods show even larger relative cold gains with SAGE, which has weaker baseline performance.}}{6}{table.caption.31}\protected@file@percent }
-\newlabel{tab:main_sage}{{3}{6}{LP performance with SAGE backbone (mean, 5 seeds). CL methods show even larger relative cold gains with SAGE, which has weaker baseline performance}{table.caption.31}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces LP performance with GAT backbone (mean, 5 seeds). The degree-dependent gain pattern holds with attention-based message passing.}}{6}{table.caption.32}\protected@file@percent }
-\newlabel{tab:main_gat}{{4}{6}{LP performance with GAT backbone (mean, 5 seeds). The degree-dependent gain pattern holds with attention-based message passing}{table.caption.32}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces LP performance with SAGE backbone (mean, 5 seeds). CL methods show even larger relative cold gains with SAGE, which has weaker baseline performance.}}{6}{table.caption.35}\protected@file@percent }
+\newlabel{tab:main_sage}{{5}{6}{LP performance with SAGE backbone (mean, 5 seeds). CL methods show even larger relative cold gains with SAGE, which has weaker baseline performance}{table.caption.35}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces LP performance with GAT backbone (mean, 5 seeds). The degree-dependent gain pattern holds with attention-based message passing.}}{6}{table.caption.36}\protected@file@percent }
+\newlabel{tab:main_gat}{{6}{6}{LP performance with GAT backbone (mean, 5 seeds). The degree-dependent gain pattern holds with attention-based message passing}{table.caption.36}{}}
 \newlabel{TotPages}{{6}{6}{}{page.6}{}}
 \gdef \@abspage@last{6}

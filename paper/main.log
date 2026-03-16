@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.14)  15 MAR 2026 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.14)  16 MAR 2026 19:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1048,31 +1048,27 @@ LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
 (Font)              scaled to size 7.0pt on input line 60.
 [2.2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/libertine/lbtn_fygcup.enc} <
-./figures/fig1_teaser.pdf> <./figures/fig2_heatmap.pdf>])
-(./sections/mechanism.tex
-Overfull \hbox (7.95291pt too wide) in paragraph at lines 62--1
+./figures/fig1_teaser.pdf> <./figures/fig2_heatmap.pdf>]
+Overfull \hbox (7.95291pt too wide) in paragraph at lines 62--63
  []\T1/LinuxLibertineT-TLF/m/it/9 (-20) OGB-scale val-i-da-tion.[] \T1/LinuxLib
 ertineT-TLF/m/n/9 (-20) On ogbl-collab (235K nodes), self-supervision
  []
 
-<figures/fig3_decomposition.pdf, id=233, 496.16045pt x 241.05424pt>
+) (./sections/mechanism.tex
+<figures/fig3_decomposition.pdf, id=236, 496.16045pt x 241.05424pt>
 File: figures/fig3_decomposition.pdf Graphic file (type pdf)
 <use figures/fig3_decomposition.pdf>
 Package pdftex.def Info: figures/fig3_decomposition.pdf  used on input line 11.
 
 (pdftex.def)             Requested size: 241.14749pt x 117.1576pt.
 
+
 Class acmart Warning: A possible image without description on input line 14.
 
-<figures/fig5_sparsity.pdf, id=235, 567.34224pt x 238.52313pt>
-File: figures/fig5_sparsity.pdf Graphic file (type pdf)
-<use figures/fig5_sparsity.pdf>
-Package pdftex.def Info: figures/fig5_sparsity.pdf  used on input line 28.
-(pdftex.def)             Requested size: 241.14749pt x 101.38371pt.
 
-Class acmart Warning: A possible image without description on input line 31.
+Underfull \vbox (badness 1259) has occurred while \output is active []
 
-) (./sections/alternatives.tex
+
 
 Package fancyhdr Warning: \headheight is too small (13.0pt): 
 (fancyhdr)                Make it at least 16.3225pt, for example:
@@ -1082,7 +1078,17 @@ Package fancyhdr Warning: \headheight is too small (13.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-3.3225pt}.
 
 [3.3 <./figures/fig3_decomposition.pdf>]
-<figures/fig4_selective.pdf, id=299, 1017.09558pt x 260.63777pt>
+<figures/fig5_sparsity.pdf, id=300, 567.34224pt x 238.52313pt>
+File: figures/fig5_sparsity.pdf Graphic file (type pdf)
+<use figures/fig5_sparsity.pdf>
+Package pdftex.def Info: figures/fig5_sparsity.pdf  used on input line 28.
+(pdftex.def)             Requested size: 241.14749pt x 101.38371pt.
+
+
+Class acmart Warning: A possible image without description on input line 31.
+
+) (./sections/alternatives.tex
+<figures/fig4_selective.pdf, id=303, 1017.09558pt x 260.63777pt>
 File: figures/fig4_selective.pdf Graphic file (type pdf)
 <use figures/fig4_selective.pdf>
 Package pdftex.def Info: figures/fig4_selective.pdf  used on input line 11.
@@ -1091,14 +1097,11 @@ Package pdftex.def Info: figures/fig4_selective.pdf  used on input line 11.
 
 Class acmart Warning: A possible image without description on input line 14.
 
-) (./sections/discussion.tex) (./main.bbl
+[4.4 <./figures/fig5_sparsity.pdf> <./figures/fig4_selective.pdf>])
+(./sections/discussion.tex) (./main.bbl
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
 (Font)              scaled to size 7.0pt on input line 46.
-
-Underfull \vbox (badness 1337) has occurred while \output is active []
-
- [4.4 <./figures/fig5_sparsity.pdf> <./figures/fig4_selective.pdf>])
-(./sections/appendix.tex
+) (./sections/appendix.tex
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1108,6 +1111,10 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 )
 
 Class acmart Warning: Some images may lack descriptions.
+
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
 
 Package fancyhdr Warning: \headheight is too small (13.0pt): 
@@ -1129,30 +1136,33 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4D3F3E3CB8BC148886A0BCF654E8800F;1756.
+(rerunfilecheck)             Checksum: C7EE5C7D4A7EAE09097898F46AE8B5D4;1756.
  ) 
 Here is how much of TeX's memory you used:
- 21673 strings out of 474222
- 349948 string characters out of 5748733
- 1959975 words of memory out of 5000000
- 42898 multiletter control sequences out of 15000+600000
- 719472 words of font info for 368 fonts, out of 8000000 for 9000
+ 21695 strings out of 474222
+ 350328 string characters out of 5748733
+ 1961975 words of memory out of 5000000
+ 42900 multiletter control sequences out of 15000+600000
+ 722839 words of font info for 381 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
- 90i,12n,131p,1408b,705s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 90i,12n,131p,1425b,639s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/newtx/LibertineMathMI.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTZ.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/newtx/txsys.pfb>
-Output written on main.pdf (6 pages, 583656 bytes).
+/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/LibertineMathMI7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/newtx/LibertineMathRM.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumT.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/libertine/LinBiolinumTB.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineT.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTI.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/libertine/LinLibertineTZ.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/newtx/txsys.pfb>
+Output written on main.pdf (6 pages, 596422 bytes).
 PDF statistics:
- 503 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 88186 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 529 PDF objects out of 1000 (max. 8388607)
+ 247 compressed objects within 3 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 90234 words of extra memory for PDF output out of 106986 (max. 10000000)
 

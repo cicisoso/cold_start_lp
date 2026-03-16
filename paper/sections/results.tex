@@ -56,7 +56,29 @@ Figure~\ref{fig:teaser} shows the AUC improvement from GlobalCL over the Vanilla
 \end{figure}
 
 \paragraph{Robustness across backbones and metrics.}
-The degree-dependent gain pattern holds across all three backbones (GCN, SAGE, GAT). On GAT---which already achieves higher baseline performance via attention---CL still provides +6\% cold AUC on Cora and +12\% cold AP on CS. The pattern is consistent across AUC, AP, and Hits@20: for every dataset-backbone pair, the cold-edge metric improvement from CL exceeds the warm-edge improvement.
+The degree-dependent gain pattern holds across all three backbones (GCN, SAGE, GAT). On GAT---which already achieves higher baseline performance via attention---CL still provides +6\% cold AUC on Cora and +12\% cold AP on CS. The pattern is consistent across AUC, AP, and Hits@20: for every dataset-backbone pair, the cold-edge metric improvement from CL exceeds the warm-edge improvement. Full results with AP and Hits@20 for all backbones are in Appendix Tables~\ref{tab:main_sage}--\ref{tab:main_gat}.
 
 \paragraph{OGB-scale validation.}
 On ogbl-collab (235K nodes), self-supervision improves cold-edge AUC from 70.1\% (Vanilla) to 78.9\% (AugOnly) and 78.3\% (GlobalCL), confirming the tail benefit at OGB scale.
+
+\paragraph{Inductive cold-start evaluation.}
+To test whether SSL benefits generalize to true cold-start settings, we hold out 20\% of nodes entirely from training and evaluate link prediction to/from these unseen nodes. As shown in Table~\ref{tab:inductive}, CL provides substantial inductive gains across all datasets, with the largest improvements on CiteSeer (+11.3\% AUC, +10.5\% AP) and CS (+6.5\% AUC, +6.5\% AP). This confirms that the SSL-induced representation invariances generalize beyond the transductive setting to genuinely unseen nodes.
+
+\begin{table}[t]
+\centering
+\small
+\caption{Inductive evaluation: 20\% of nodes held out entirely. CL consistently improves prediction of links to unseen nodes.}
+\label{tab:inductive}
+\begin{tabular}{l cc cc c}
+\toprule
+& \multicolumn{2}{c}{Vanilla} & \multicolumn{2}{c}{GlobalCL} & \\
+\cmidrule(lr){2-3} \cmidrule(lr){4-5}
+Dataset & AUC & AP & AUC & AP & $\Delta$AUC \\
+\midrule
+Cora & .696 & .704 & .766 & .772 & +7.0\% \\
+CiteSeer & .721 & .721 & .834 & .826 & +11.3\% \\
+PubMed & .853 & .837 & .891 & .877 & +3.8\% \\
+CS & .845 & .840 & .910 & .905 & +6.5\% \\
+\bottomrule
+\end{tabular}
+\end{table}
